@@ -1,0 +1,74 @@
+package pravougulnik;
+import java.util.*;
+public class karti {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner (System.in);
+		int symbol;
+		System.out.println("Vuvedi simvol:");
+		symbol=scanner.nextInt();
+		switch(symbol)
+		{
+			case 1:
+			
+				System.out.println("Validna karta");
+				break;
+			case 2:
+				if(symbol==3)
+				System.out.println("Validna karta");
+				break;
+			case 3:
+				if(symbol=='4')
+				System.out.println("Validna karta");
+				break;
+			case 4:
+				symbol=5;
+				System.out.println("Validna karta"+symbol);
+				break;
+			case 5:
+				if(symbol=='6')
+				System.out.println("Validna karta");
+				break;
+			case 6:
+				if(symbol=='7')
+				System.out.println("Validna karta");
+				break;
+			case 7:
+				if(symbol=='8')
+				System.out.println("Validna karta");
+				break;
+			case 8:
+				if(symbol=='9')
+				System.out.println("Validna karta");
+				break;
+			case 9:
+				if(symbol=='1')
+				System.out.println("Validna karta");
+				break;
+			case 10 :
+				if(symbol=='J')
+				System.out.println("Validna karta");
+				break;
+			case 11 :
+				if(symbol=='Q')
+				System.out.println("Validna karta");
+				break;
+			case 12:
+				if(symbol=='K')
+				System.out.println("Validna karta");
+				break;
+			case 13:
+				if(symbol=='A')
+				System.out.println("Validna karta");
+				break;
+			default:
+				System.out.println("Nevalidna karta");
+				break;
+		}
+		//Класическото тесте карти се състои от 13 различни вида карти съответно 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K and A. 
+		//Направете програма която приема от конзолата 1 символ и 
+		//принтира "Валидна карта" ако символът представлява валидна карта и 
+		//съответно "Невалидна карта" ако символът не представлява валидна карта 
+	}
+
+}
