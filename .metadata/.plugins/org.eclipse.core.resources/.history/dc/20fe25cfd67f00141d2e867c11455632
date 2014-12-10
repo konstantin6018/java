@@ -1,0 +1,23 @@
+package domashnarabota2;
+
+public class Chislataot30do1 {
+
+	public static void main(String[] args) {
+		int red=5;
+		int kol=6;
+		//int counter=30;
+		//while(counter>0){
+		for(int i=1;i<=red;i++){
+			System.out.print(1);
+			for(int j=1;j<=kol;j++){
+				
+			}
+			
+		}
+			//counter --;
+			
+			
+		}
+	}
+
+//}
