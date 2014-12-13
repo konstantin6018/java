@@ -10,7 +10,7 @@ public class ZadachaKarti {
 	System.out.printf("%s\t ",ime[g]);	
 	}
 		
-	for(int j=0;j<=karti.length;j++)
+	for(int j=0;j<=karti.length-1;j++)
 	{		System.out.println(" ");
 			
 		for(int i=1;i<=ime.length;i++)

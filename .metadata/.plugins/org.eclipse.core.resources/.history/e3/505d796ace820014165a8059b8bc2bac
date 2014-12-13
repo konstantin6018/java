@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class ChetnoNechetno {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int num;
+		num=input.nextInt();
+		Proverka(num);
+		}
+		public static void Proverka(int num){
+			if(num%2==0){
+				System.out.println("chetno chislo");
+			}
+			else 
+				System.out.println("nechetno chislo");
+		}
+	}
+
+	//Дефинирайте функция която приема 1 параметър - число и принтира на екрана "четно" ако числото е четно и "нечетно" ако числото е нечетно. 
+//	Демонстрирайте действието на фукцията с няколкопримера
+	
+

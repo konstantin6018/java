@@ -1,0 +1,10 @@
+
+public class SimetrichniChisla {
+
+	public static void main(String[] args) {
+
+	}
+
+}
+
+//Направете програма с функция която принтира всички симетрични числа в интервала [0 ; 999]

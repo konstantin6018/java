@@ -1,0 +1,35 @@
+
+public class SimetrichniChisla {
+
+	public static void main(String[] args) {
+
+		pSimetriq();
+	}
+	public static void pSimetriq(){
+		
+		
+		for (int number=0; number<1000; number++) {
+			if(number<10 ||number%10==number/10){
+				//System.out.print(number+" ");
+			}
+			else if(number>100 && number%10==number/100 ){
+				//System.out.print(number+" ");
+				
+				
+				for(int j=0;j<=50;j++)
+				{		
+						
+					for(int i=1;i<=20;i++){
+						System.out.print(number+" ");
+					}	
+			}
+		}
+			
+		}
+		
+		
+	}
+	}
+
+
+//Направете програма с функция която принтира всички симетрични числа в интервала [0 ; 999]
