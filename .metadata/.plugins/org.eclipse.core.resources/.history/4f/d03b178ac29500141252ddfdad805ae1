@@ -1,0 +1,116 @@
+
+import java.util.*;
+public class Sequence {
+
+	public static void main(String[] args) {
+		int len=0,previouslen=0,start=0;
+		boolean Flag=true;
+		Scanner input = new Scanner(System.in);
+		int [] sequence=new int[10];
+		int [] printsequence=new int [10];
+		System.out.println("Vuvedi 10 chisla:");
+		for(int i=0;i<sequence.length;i++){
+			sequence[i]=input.nextInt();
+			}
+		input.close();
+		while(Flag){
+	for(int i=0;i<sequence.length-1;i++){
+		if(sequence[i+1]>sequence[i]){
+			start=i+1;
+			len++;
+		}
+			else if (sequence[i+1]<sequence[i]){
+				previouslen=len;
+				if(len>previouslen){
+					for(int j=0;j<len;j++){
+						printsequence[j]=sequence[start-len];
+						start++;
+					}
+					previouslen=len;
+				}
+				len=0;
+			}	
+		 int counter=0;
+		 counter ++;
+        if (counter==sequence.length-1)
+        {
+            Flag = false;
+        }
+	}
+	}
+	System.out.println();
+	for(int i=0;i<=previouslen+1;++i){
+		System.out.printf("%d",sequence[i]);
+	}
+		}
+		
+}
+//11,12,13,14; 1,2,3, 2, 7, 9, 13, 16, 18, 1
+//import java.util.Scanner;
+//
+//
+//public class Sequence
+//{
+//    public static void main(String[] args)
+//    {
+//    	Scanner scan = new Scanner(System.in);
+//    	int[] elements = new int[10];
+//       System.out.println("Import Streak of 10 numbers and see the biggest \"Ascending Streak\":  ");
+//      
+//     
+//        
+//        
+//        for (int i = 0; i < elements.length; i++)
+//        {
+//            elements[i] = scan.nextInt();
+//        }
+//        scan.close();
+//        arr(elements);
+//    }
+//    public static void arr(int[] array)
+//    {
+//        int i = 0;
+//        int previusNum = array[0];
+//        int k = 0;
+//        boolean Flag = true;
+//        int[] temporaryArray = new int[array.length];
+//        int ElementCounter = 0;
+//        int OldElementCounter = 0;
+//        while (Flag)
+//        {
+//
+//            if (previusNum < array[i + 1])
+//            {
+//                k = i + 1;
+//                ElementCounter++;
+//                previusNum=array[i+1];
+//
+//            }
+//            else if (array[i] >= array[i + 1])
+//            {
+//                previusNum = array[i + 1];
+//                if (ElementCounter > OldElementCounter)
+//                {
+//                    for (int j = 0; j < ElementCounter+1; j++)
+//                    {
+//                        temporaryArray[j] = array[k - ElementCounter];
+//                        k++;
+//                    }
+//                    OldElementCounter = ElementCounter;
+//                }
+//                ElementCounter = 0;
+//
+//            }
+//            
+//            i++;
+//            if (i==array.length-1)
+//            {
+//                Flag = false;
+//            }
+//        }
+//        for (int z = 0; z < OldElementCounter+1; z++)
+//        {
+//            System.out.printf("%d ",temporaryArray[z]);
+//        }
+//    }
+//}

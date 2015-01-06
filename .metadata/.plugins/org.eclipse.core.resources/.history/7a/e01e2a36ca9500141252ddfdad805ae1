@@ -1,0 +1,55 @@
+//Дефинирайте клас за магазин, който съдържа полета за име и локация на магазина както и  масив от Stock елементи (от горната задача) и
+//2 метода - добавяне на продукт и отбелязване на продукт, че е свършил
+import java.util.*;
+public class Shop {
+	private String name;
+	private String location;
+	private ArrayList stock = new ArrayList();
+
+	public Shop() {
+	}
+
+	public ArrayList getStock() {
+		return stock;
+	}
+	public Shop(String name, String location) {
+
+		setName(name);
+		setLocation(location);
+
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+	public static void main(String[] args) {
+		Shop market = new Shop();
+		market.setName("Shop 1");
+		market.getStock().add(new Vegetables(true, 2, "Tomato", "GR"));
+		Scanner in = new Scanner(System.in);
+		System.out.println("Stock: ");
+		Vegetables vegetable = new Vegetables();
+		String vegname = null;
+		vegname = in.nextLine();
+		vegetable.setVid(vegname);
+
+	}
+
+	public void available(Shop toadd) {
+		stock.add(toadd);
+	}
+
+}

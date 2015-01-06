@@ -1,0 +1,19 @@
+//Създайте клас SUV който налседява Car  и съдържа boolean поле дали джипа е високопроходим.  
+public class SUV extends Car {
+	private boolean SUV;
+	public SUV(float price,boolean SUV){
+		super(price);
+		this.SUV=SUV;
+	}
+public boolean getSUV(){
+	return SUV;
+}
+public void setSUV(boolean SUV){
+	this.SUV=SUV;
+}
+public void kola(){
+	System.out.printf("%f,%f",super.price,this.SUV);
+	
+}
+
+}

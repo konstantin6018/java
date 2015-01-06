@@ -1,0 +1,33 @@
+//Дефинирайте клас Car с единствено поле цена. Създайте клас Automobile който наследява Car и съдържа допълнително поле за разход на гориво.  
+//Създайте клас SUV който налседява Car  и съдържа boolean поле дали джипа е високопроходим.  
+//Създайте масив от тип Car и въведете в него 5 коли и 5 джипа. 
+//Сортирайте масива по цена на конкретната кола. 
+public class Main {
+	public static void main(String[] args){ 
+		Automobile BMW=new Automobile(500.4f,7.5f);
+		Automobile mercedes=new Automobile(5004.4f,9.5f);
+		Automobile peugeot=new Automobile(900.4f,5.5f);
+		Automobile subaru=new Automobile(5030.4f,3.5f);
+		Automobile renault=new Automobile(5100.4f,2.5f);
+		SUV jeep=new SUV(6000.43f,true);
+		SUV VW=new SUV(6003.43f,true);
+		SUV chevy=new SUV(6700.43f,true);
+		SUV dacia=new SUV(10000.43f,true);
+		SUV landrover=new SUV(2000.43f,true);
+		Car[]cars={BMW,mercedes,peugeot,subaru,renault,jeep,VW,chevy,dacia,landrover};
+	}
+		public static void bubbleSort(Car[] cars,Car temp) {
+		    for (int a=1; a<cars.length; a++) {
+		        for(int b=0; b<cars.length-1; b++) {
+		            if (((cars[b].getPrice())>((cars[b+1].getPrice()))) )
+		                 temp = cars[b];
+		            cars[b] = cars[b+1];
+		            cars[b+1] = temp;
+		        }
+		    }
+		    System.out.println("Sorted list of numbers");	 
+		    for (int b = 0; b < cars.length; b++){
+	    	System.out.println(cars[b].getPrice());
+		  }
+		}
+	}
