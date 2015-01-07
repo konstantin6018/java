@@ -26,11 +26,10 @@ public class Cards {
 	else if(i<=36){
 		System.out.printf(boi[2]);
 	}
-	else if(i<=51) {
+	else{
 		System.out.println(boi[3]);
-		}
-	else	System.out.println("Nevalidna karta!");
-		}
-
+	}
+	input.close();
 	}
 
+}
