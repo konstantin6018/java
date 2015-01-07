@@ -21,8 +21,10 @@ public class Compare {
 			for(int in=0;in<20;in++){
 				rezult = Array[j].equals( Array[in] );
 				if(rezult==true){
-			    System.out.printf("\n Proverka=%s	" ,Array[j]);
+			    System.out.printf("\n Proverka= %b,%s	" ,rezult,Array[j]);
 				}
+			      
+				
 			}
 			System.out.println("\n");
 		}
