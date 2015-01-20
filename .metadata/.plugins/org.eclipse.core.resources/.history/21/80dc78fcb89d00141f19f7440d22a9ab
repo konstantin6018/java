@@ -1,9 +1,0 @@
-//Направете програма, която приема текст и извежда на екрана всички думи, които са уникални 
-//(срещат се само веднъж)
-import java.util.*;
-public class unique {
-	public static void main(String[] args) {
-	
-	}
-
-}
