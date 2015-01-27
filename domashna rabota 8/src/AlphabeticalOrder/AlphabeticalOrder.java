@@ -1,43 +1,40 @@
 package AlphabeticalOrder;
+
 import java.util.Scanner;
-public class AlphabeticalOrder{
-public static void main(String[] args) {
-	
-		Scanner sc=new Scanner(System.in);
+
+public class AlphabeticalOrder {
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
 		System.out.println("Vuvedi izrechenie: ");
-		String sentence=sc.nextLine();
-		
-		String[] parts = sentence.split(" |,");
-		
-		
-for (String string : parts) {
-	System.out.print(string+" ");
-}
-System.out.println();
-sort(parts);
-}
+		String sentence = input.nextLine();
 
-public static void sort(String[]parts){
-for(int j=0; j<parts.length;j++)
-{
-    for (int i=j+1 ; i<parts.length; i++)
-    {
-        if(parts[i].compareTo(parts[j])<0)
-        {
-            String temp= parts[j];
-            parts[j]= parts[i]; 
-            parts[i]=temp;
-        }
-		
-	
-    }
-}
+		String[] words = sentence.split(" |,");
 
-for (String string : parts) {
-	System.out.print(string+" ");
-}
-}
-		
-	
-}
+		for (String string : words) {
+			System.out.print(string + " ");
+		}
+		System.out.println();
+		sort(words);
+		input.close();
+	}
 
+	public static void sort(String[] words) {
+		for (int j = 0; j < words.length; j++) {
+			for (int i = j + 1; i < words.length; i++) {
+				if (words[i].compareTo(words[j]) < 0) {
+					String temp = words[j];
+					words[j] = words[i];
+					words[i] = temp;
+				}
+
+			}
+		}
+		System.out.println("Dumite na izrechenieto podredeni po azbuchen red:");
+		for (String string : words) {
+			System.out.print(string + " ");
+		}
+		
+	}
+
+}
