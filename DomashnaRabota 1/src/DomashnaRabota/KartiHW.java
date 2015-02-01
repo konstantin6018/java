@@ -1,13 +1,19 @@
-package domashnarabota;
+package DomashnaRabota;
 
+//Класическото тесте карти се състои от 13 различни вида карти
+// съответно 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K and A.
+// Направете програма която приема от конзолата 1 символ и
+// принтира "Валидна карта" ако символът представлява валидна карта и
+// съответно "Невалидна карта" ако символът не представлява валидна
+// карта
 import java.util.*;
 
-public class karti {
+public class KartiHW {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		String symbol;// ne go napravih s char ,zashtoto togava nqmashe da e
-						// vuzmojno vuvejdaneto na karta s nomer 10
+		String symbol;
+
 		System.out.println("Vuvedi simvol:");
 		symbol = scanner.next();
 		switch (symbol) {
@@ -55,12 +61,7 @@ public class karti {
 			break;
 
 		}
-		// Класическото тесте карти се състои от 13 различни вида карти
-		// съответно 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K and A.
-		// Направете програма която приема от конзолата 1 символ и
-		// принтира "Валидна карта" ако символът представлява валидна карта и
-		// съответно "Невалидна карта" ако символът не представлява валидна
-		// карта
+		scanner.close();
 
 	}
 }

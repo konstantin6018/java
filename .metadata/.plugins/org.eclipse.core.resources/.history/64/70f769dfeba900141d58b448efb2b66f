@@ -1,0 +1,36 @@
+/*Направете програма която чете поредица от символи и
+ замества поредните повтарящи се символи със съответния 
+ символ повтарящ се само веднъж:
+ Пример:
+“gggggssssstttttsssssaaaaa"  “gsts".
+
+ */
+
+
+import java.util.ArrayList;
+
+public class RepeatingSymbols {
+	public static void main(String[] args) {
+
+		String array = "aaaagdfgggggvdfgvffffffgfdg";
+
+		ArrayList<Character> arr = new ArrayList<Character>();
+
+		for (int i = 0; i < array.length(); i++) {
+			if (!arr.contains(array.charAt(i))) {
+				arr.add(array.charAt(i));
+			}
+
+		}
+
+		for (Character character : arr) {
+			System.out.print(character);
+		}
+		System.out.println();
+
+		for (int i = 0; i < arr.size(); i++) {
+			System.out.print(arr.get(i));
+		}
+
+	}
+}

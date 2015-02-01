@@ -1,0 +1,36 @@
+import java.util.*;
+//Направете програма, която приема 2 масива от конзолата и извежда броя на съвпадащи числа.
+
+public class MatchingNumbers {
+
+    public static void main(String args[]) {
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Vuvedi opredelena duljina na dvata masiva");
+        int firstArrLen = input.nextInt();
+        int secondArrLen = input.nextInt();
+
+        int[] firstArr = new int[firstArrLen];
+        int[] secondArr = new int[secondArrLen];
+
+        System.out.println("Vuvedi "+firstArrLen+" chisla");
+        for (int i = 0; i < firstArrLen; i++) {
+            firstArr[i] = input.nextInt();
+        }
+        System.out.println("Vuvedi "+secondArrLen+" chisla");
+        for (int i = 0; i < secondArrLen; i++) {
+            secondArr[i] = input.nextInt();
+        }
+        int counter = 0;
+
+        for (int i = 0; i < firstArrLen; i++) {
+            for (int j = 0; j < secondArrLen; j++) {
+                if (firstArr[i] == secondArr[j]) {
+                    counter++;
+                }
+            }
+        }
+        System.out.println("Broq na povtarqshite chisla e :" + counter);
+        input.close();
+    }
+}

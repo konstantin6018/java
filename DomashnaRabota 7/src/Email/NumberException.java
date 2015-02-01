@@ -1,12 +1,12 @@
 package Email;
-public class NumberException extends Exception{
-	public NumberException(){
+
+public class NumberException extends Exception {
+	public NumberException() {
 		super();
 	}
-	
-	 public NumberException(String message) {
-        super(message);
-     }
-	
+
+	public NumberException(String message) {
+		super(message);
+	}
 
 }

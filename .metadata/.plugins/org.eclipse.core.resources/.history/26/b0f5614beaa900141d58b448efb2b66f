@@ -1,0 +1,31 @@
+import java.util.*;
+public class BiggestSum {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        int[] arrayNumbers = new int[20];
+        int maxSumStartIndext = 0;
+        int maxSum = Integer.MIN_VALUE;
+        System.out.println("Vuvedi 20 chisla :");
+        for (int i = 0; i < arrayNumbers.length; i++) {
+            arrayNumbers[i] = input.nextInt();
+        }
+        System.out.println(arrayNumbers);
+        for (int i = 2; i < arrayNumbers.length; i++) {
+
+            int currentSum = arrayNumbers[i] + arrayNumbers[i - 1] + arrayNumbers[i - 2];
+
+            if (currentSum > maxSum) {
+                maxSum = currentSum;
+                maxSumStartIndext = i - 2;
+            }
+        }
+        System.out.format("Troikata s maksimalna suma e: " + maxSum + " " + arrayNumbers[maxSumStartIndext]
+                + " " + arrayNumbers[maxSumStartIndext + 1] + " "
+                + arrayNumbers[maxSumStartIndext + 2]);
+        input.close();
+
+    }
+}

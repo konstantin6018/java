@@ -1,4 +1,6 @@
 import java.util.Random;
+//Дефинирайте фунцкия която приема 3 параметъра - цели числа и ги умножава едно с друго. 
+//Извикайте функцията 20 пъти с рандом генерирани параметри. Изведете резултата на екрана
 public class FunkciqsTriParametura {
 
 	public static void main(String[] args) {

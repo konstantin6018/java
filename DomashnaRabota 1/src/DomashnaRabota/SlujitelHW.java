@@ -1,49 +1,53 @@
-package domashnarabota;
+package DomashnaRabota;
+
+//Компания се нуждае от система за съхранение на информация за служители. 
+//Направете програма, която изисква следната информация: Име, Фамилия, Години (0, 120), пол (еднобуквен 'м' или 'ж'), ЕГН, телефон.
+//Подберете подходящите типове данни и декларирайте нужните променливи. 
+//Прочетете от конзолата нужната иформация за служител и след това я изведете на конзолата
 import java.util.*;
-public class slujitel {
+
+public class SlujitelHW {
 
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner (System.in);
-		String ime ;
+		Scanner scanner = new Scanner(System.in);
+		String ime;
 		String familiq;
 		int godini;
 		char pol;
 		String EGN;
 		String telefon;
 		System.out.println("Vuvedete ime:");
-		ime= scanner.next();
+		ime = scanner.next();
 		System.out.println("Vuvedi familiq:");
-		familiq= scanner.next();
+		familiq = scanner.next();
 		System.out.println("Vuvedi godini:");
-		godini=scanner.nextInt();
-		if(godini>=120 || godini<=0){
-			throw new IllegalArgumentException("molq vuvedete godini v intervala ot 0 do 120");
-			}
-		else
+		godini = scanner.nextInt();
+		if (godini >= 120 || godini <= 0) {
+			throw new IllegalArgumentException(
+					"molq vuvedete godini v intervala ot 0 do 120");
+		} else
 			System.out.println("godinite sa v pravini interval");
-		System.out.print("Vuvedi pol,vuvedete bukvata (m) za muj ili bukvata (j) za jena:");
-		pol=scanner.next().charAt(0);
-		switch(pol)
-		{
-			case 'm':
-				System.out.println("muj");
-				break;
-			case 'j':
-				System.out.println("jena");
-				break;
-				default:
-					throw new IllegalArgumentException("molq vuvedete bukvata (m) za muj ili bukvata (j) za jena");
+		System.out
+				.print("Vuvedi pol,vuvedete bukvata (m) za muj ili bukvata (j) za jena:");
+		pol = scanner.next().charAt(0);
+		switch (pol) {
+		case 'm':
+			System.out.println("muj");
+			break;
+		case 'j':
+			System.out.println("jena");
+			break;
+		default:
+			throw new IllegalArgumentException(
+					"molq vuvedete bukvata (m) za muj ili bukvata (j) za jena");
 		}
 		System.out.println("Vuvedi EGN:");
-		EGN=scanner.next();
+		EGN = scanner.next();
 		System.out.println("Vuvedi telefon:");
-		telefon=scanner.next();
+		telefon = scanner.next();
 		System.out.println("Izvezdane na informaciqta:");
-		System.out.println("ime:"+ime+" familiq:"+familiq +" godini:"+godini+ " pol:"+pol+" EGN:"+ EGN +" tel:"+ telefon);
+		System.out.println("ime:" + ime + " familiq:" + familiq + " godini:"
+				+ godini + " pol:" + pol + " EGN:" + EGN + " tel:" + telefon);
 	}
 
 }
-//Компания се нуждае от система за съхранение на информация за служители. 
-//Направете програма, която изисква следната информация: Име, Фамилия, Години (0, 120), пол (еднобуквен 'м' или 'ж'), ЕГН, телефон.
-// Подберете подходящите типове данни и декларирайте нужните променливи. 
-//Прочетете от конзолата нужната иформация за служител и след това я изведете на конзолата

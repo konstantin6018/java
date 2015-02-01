@@ -1,0 +1,23 @@
+package domashnarabota;
+
+//Направете програма, която приема две числа с плаваща запетая съответно 
+//дължината и ширината на правоъгълник. Пресметнете лицето на дадния правоъгълник и я изведете на конзолата
+import java.util.*;
+
+public class pravougulnik {
+
+	public static void main(String[] args) {
+		float stranaA;
+		float stranaB;
+		float liceS;
+		Scanner input = new Scanner(System.in);
+		System.out.println("Vuvedi stoinost za strana a:");
+		stranaA = input.nextInt();
+		System.out.println("Vuvedi stoinost za strana b:");
+		stranaB = input.nextInt();
+		liceS = (stranaA * stranaB);
+		System.out.println("Liceto na pravougulnika e :" + liceS);
+		input.close();
+	}
+
+}

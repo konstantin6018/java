@@ -1,39 +1,36 @@
 package Sellable;
+
 import java.util.ArrayList;
 import java.math.BigDecimal;
 
 public class Main {
-public static void main(String[] args) {
-	
-	
-	 ArrayList<Sellable> sell = new ArrayList<Sellable>();
+	public static void main(String[] args) {
 
-     tv tv = new tv("Panasonic",150);
-     mobilephones phone= new mobilephones("nokia",300);
-     laptop laptop = new laptop("lenovo",1000);
+		ArrayList<Sellable> sell = new ArrayList<Sellable>();
 
-     sell.add(tv);
-     sell.add(phone);
-     sell.add(laptop);
+		TV TV = new TV("Panasonic", 150);
+		Mobilephones phone = new Mobilephones("nokia", 300);
+		Laptop Laptop = new Laptop("lenovo", 1000);
 
-     shoppingCart checkout = new shoppingCart (new BigDecimal(15000), sell);
+		sell.add(TV);
+		sell.add(phone);
+		sell.add(Laptop);
 
-     try {
-         BigDecimal money1 = new BigDecimal(1000);
-         checkout.sell(money1);
-         System.out.println("Uspeshna tranzakciq");
-         
-         BigDecimal money2 = new BigDecimal(500);
-         checkout.sell(money2);
-         System.out.println("Uspeshna tranzakciq");
+		ShoppingCart checkout = new ShoppingCart(new BigDecimal(15000), sell);
 
-     } catch (SellableExcepltion e) {
-         System.out.println("Neuspeshna tranzakciq");
- 
-     }
+		try {
+			BigDecimal money1 = new BigDecimal(1000);
+			checkout.sell(money1);
+			System.out.println("Uspeshna tranzakciq");
 
-     
+			BigDecimal money2 = new BigDecimal(500);
+			checkout.sell(money2);
+			System.out.println("Uspeshna tranzakciq");
+
+		} catch (SellableExcepltion e) {
+			System.out.println("Neuspeshna tranzakciq");
+
+		}
+
+	}
 }
-}
-	
-

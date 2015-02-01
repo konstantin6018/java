@@ -1,20 +1,21 @@
 import java.util.Scanner;
 import java.util.Arrays;
+
 public class ArraySort {
 
 	public static void main(String[] args) {
-		Scanner input = new Scanner (System.in);
-		int c;
+		Scanner input = new Scanner(System.in);
+		int lenghtOfArray;
 		System.out.println("Vuvedi duljina na masiva ");
-		c= input.nextInt();
-		int [] Array=new int [c];
-		for(int i =0;i<c;i++){
+		lenghtOfArray = input.nextInt();
+		int[] Array = new int[lenghtOfArray];
+		for (int i = 0; i < lenghtOfArray; i++) {
 			System.out.println("Vuvedi chislo:");
-			Array[i]=input.nextInt();
+			Array[i] = input.nextInt();
 		}
 		Arrays.sort(Array);
-		for(int j=0;j<c;j++){
-			System.out.println(" "+Array[j]);
+		for (int j = 0; j < lenghtOfArray; j++) {
+			System.out.println(" " + Array[j]);
 		}
 		input.close();
 	}

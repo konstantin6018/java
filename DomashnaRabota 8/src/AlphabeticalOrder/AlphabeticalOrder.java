@@ -34,7 +34,7 @@ public class AlphabeticalOrder {
 		for (String string : words) {
 			System.out.print(string + " ");
 		}
-		
+
 	}
 
 }

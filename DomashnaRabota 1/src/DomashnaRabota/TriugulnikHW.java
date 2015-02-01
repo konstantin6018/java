@@ -1,24 +1,28 @@
-package domashnarabota;
+package DomashnaRabota;
+
+//Направете програма, която приема 3 цели числа. 
+//Изведете на конзолата дали може да бъде бъде образуван триъгълник с дължини на страните съответни 3 числа.
+
 import java.util.*;
-public class triugulnik {
+
+public class TriugulnikHW {
 
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner (System.in);
-		int a;
-		int b;
-		int c;
+		Scanner scanner = new Scanner(System.in);
+		int stranaA;
+		int stranaB;
+		int stranaC;
 		System.out.println("Vuvedi stoinost za stranata a:");
-		 a=scanner.nextInt();
-		 System.out.println("Vuvedi stoinost za stranata b:");
-		 b=scanner.nextInt();
-		 System.out.println("Vuvedi stoinost za stranata c:");
-		 c=scanner.nextInt();
-		 if(a+b>c && a+c>b && b+c>a )
-		 {
-			 System.out.println("Moje da se suzdade triugulnik");
-		 }
-		 else 
-			 System.out.println("Ne moje da se suzdade triugulnik");
+		stranaA = scanner.nextInt();
+		System.out.println("Vuvedi stoinost za stranata b:");
+		stranaB = scanner.nextInt();
+		System.out.println("Vuvedi stoinost za stranata c:");
+		stranaC = scanner.nextInt();
+		if (stranaA + stranaB > stranaC && stranaA + stranaC > stranaB
+				&& stranaB + stranaC > stranaA) {
+			System.out.println("Moje da se suzdade triugulnik");
+		} else
+			System.out.println("Ne moje da se suzdade triugulnik");
 	}
 
 }
