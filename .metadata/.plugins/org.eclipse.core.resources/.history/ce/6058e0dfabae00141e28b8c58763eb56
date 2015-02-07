@@ -1,0 +1,44 @@
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.util.Scanner;
+
+public class Country {
+
+	public static void main(String[] args) {
+
+		String filePath = "../output/countries.txt";
+		String filePath1="../output/cities.txt";
+		try {			
+			FileWriter fileStream = new FileWriter(filePath);
+			FileWriter fileStream1 = new FileWriter(filePath1);
+			BufferedWriter writer = new BufferedWriter(fileStream);
+			BufferedWriter writer1= new BufferedWriter(fileStream1);
+			Scanner input= new Scanner(System.in);
+			System.out.println("Vuvedete 5 durjavai i 5 stolici");
+			
+			for (int i = 0; i < 5; i++) {
+				String countries= input.nextLine();
+				String[] countryOne=countries.split(" ");
+				writer.write(countryOne[0]);
+				writer.newLine();
+				writer1.write(countryOne[1]);
+				writer1.newLine();
+			}
+			
+			writer.close();
+			writer1.close();
+			input.close();
+		} catch (Exception e) {
+			System.out.println("Vuznikna greshka pri zapisa na faila");
+			System.out.println(e.getMessage());
+		}
+		finally{
+			System.out.println("Programata se izpulni!");
+		}
+		
+	
+	}
+
+}
+
